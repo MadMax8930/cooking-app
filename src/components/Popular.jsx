@@ -17,12 +17,10 @@ function Popular() {
 
   const getPopular = async () => {
 
-    // In localStorage we can only save Strings
-
-    const check = localStorage.getItem('popular');
+    const check = localStorage.getItem('popular'); // In localStorage we can only save Strings
 
     if (check) {
-       setPopular(JSON.parse(check));  // From string to array
+       setPopular(JSON.parse(check));  // From string to array and no fetch
     } else {
        const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=9`);
        const data = await api.json();
@@ -44,7 +42,7 @@ function Popular() {
             arrows: false,
             pagination: false,
             drag: 'free',
-            gap: "5rem",
+            gap: "3rem",
           }}>
 
             {popular.map(recipe => {  
