@@ -7,7 +7,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 function Pages() {
-  const location = useLocation();
+  const location = useLocation(); // To see when the page/component is getting mounted/unmounted (for Routing)
   return (
     <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.pathname}>  
