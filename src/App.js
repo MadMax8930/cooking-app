@@ -2,7 +2,7 @@ import Pages from "./pages/Pages";
 import Category from "./components/Category";
 import { BrowserRouter } from 'react-router-dom';
 import Search from "./components/Search";
-// BrowserRouter gives us the functionality ti navigate around pages ( we moved it one level up so it can also surround the Category component)
+// BrowserRouter gives us the functionality to navigate around pages ( we moved it one level up so it can also surround the Category component)
 
 // npm install framer-motion react-icons react-router-dom styled-components @splidejs/react-splide
 
